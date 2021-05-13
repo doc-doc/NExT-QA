@@ -1,6 +1,8 @@
 # NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions
 
-In this repo, we reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset published on CVPR2021 (with 1 Strong Accept and 2 Weak Accept). 
+We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset published on CVPR2021 (with 1 Strong Accept and 2 Weak Accepts). 
+
+NExT-QA is a VideoQA benchmark to advance video understanding from describing to explaining the temporal actions. It is unique in that it goes beyond descriptive QA (what is) to benchmark causal and temporal action reasoning (why/how did) in realistice videos and it is also rich in object interactions. NExT-QA contains 5440 videos and over 52K manually annotated question-answer pairs grouped into causal, temporal and descriptive questions. We set up both multi-choice and open-ended QA tasks on the dataset. This repo. provides resources for multi-choice QA. Open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE).
 
 ## Environment
 
@@ -9,35 +11,33 @@ Anaconda 3, python 3.6.8, pytorch 1.6 and cuda 10.2. For others libs, please ref
 ## Install
 Please create an envs for this project using anaconda3 (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
 ```
->conda create -n envname python=3.6.5 # Create
+>conda create -n envname python=3.6.8 # Create
 >conda activate envname # Enter
 >pip install -r requirements.txt # Install the provided libs
->sh vRGV/lib/make.sh # Set the environment for detection
 ```
 ## Data Preparation
-Please download the data [here](https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing). The folder [ground_data] should be at the same directory as vRGV [this project]. Please merge the downloaded vRGV folder with this repo. 
+Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are three zip files correspond to 1) appearance and motion feature for video representation, 2) Finetuned BERT feature for QA-pair representation, and 3) Annotations of QAs and GloVe features for related words. After downloading the data, please create a folder ['data'] at the same directory as NExT-QA (this repo), then unzip the video and QA features into it. You will have directories like ['data/vid_feat/*' and 'data/qas_bert/*']. Please unzip the file 'nextqa.zip' into ['NExT-QA/dataset/nextqa']. (Note that the test set is held out.) 
 
-Please download the raw videos [here](https://xdshang.github.io/docs/imagenet-vidvrd.html), and extract them into ground_data/vidvrd/JPEGImages/. 
-```
-ffmpeg -i vname.mp4 -start_number 0 ./%06d.JPEG
-```
-The directory should be like: JPEGImages/ILSVRC2015_train_xxx/000000.JPEG.(Please make sure that the index starts from 0.)
+You are also encouraged to design your own pre-computed video features. In that case, please download the raw videos from [VidOR](https://xdshang.github.io/docs/vidor.html). As NExT-QA's videos are sourced from VidOR, you can easily link the QA annotations with the corresponding videos according to the key 'video' in the [nextqa/*.csv] files, during which you may need the map file ['nextqa/map_vid_vidorID.json'].
+
 
 ## Usage
-Feature Extraction (need about 100G storage! Because I dumped all the detected bboxes along with their features. It can be greatly reduced by changing detect_frame.py to return the top-40 bboxes and save them with h5py file.)
+Once the data is ready, you can easily run the code. First, to test the environment and code, we provide the prediction and model of the SOTA approach (i.e., HGA) on NExT-QA. 
+You can get the results reported in the paper by running: 
 ```
->./detection.sh
+>python mul_eval.py
 ```
-Training
+The command above will load the prediction file under ['results/'] and evaluate it. 
+You can also obtain the prediction by running: 
 ```
->./ground.sh 0 train # Train the model with GPU id 0
+>./main.sh 0 val #Test the model with GPU id 0
 ```
-Inference
+The command above will load the model under ['models/'] and generate the prediction file.
+If you want to train the model, please run
 ```
->./ground.sh 0 val # Output the relation-aware spatio-temporal attention
->python generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm
->python eval_ground.py # Evaluate the performance
+>./main.sh 0 train # Train the model with GPU id 0
 ```
+It will train the model and save to ['models']
 ## Visualization
 |Query| bicycle-jump_beneath-person       | person-feed-elephant          | person-stand_above-bicycle       | dog-watch-turtle|
 |:---| --------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------------- | 
