@@ -1,13 +1,10 @@
-# Visual Relation Grounding in Videos
+# NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions
 
-This is the pytorch implementation of our work at ECCV2020 (Spotlight). 
-![teaser](https://github.com/doc-doc/vRGV/blob/master/introduction.png)
-The repository mainly includes 3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.
-![](https://github.com/doc-doc/vRGV/blob/master/model.png)
+In this repo, we reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset published on CVPR2021 (with 1 Strong Accept and 2 Weak Accept). 
 
 ## Environment
 
-Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.
+Anaconda 3, python 3.6.8, pytorch 1.6 and cuda 10.2. For others libs, please refer to the file requirements.txt.
 
 ## Install
 Please create an envs for this project using anaconda3 (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
@@ -64,4 +61,4 @@ If you find the code useful in your research, please kindly cite:
 
 ## License
 
-NUS © [NExT++](https://nextcenter.org/)
+NUS © [NExT](https://nextcenter.org/)
