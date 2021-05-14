@@ -11,9 +11,10 @@ Anaconda 3, python 3.6.8, pytorch 1.6 and cuda 10.2. For others libs, please ref
 ## Install
 Please create an envs for this project using anaconda3 (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
 ```
->conda create -n envname python=3.6.8 # Create
->conda activate envname # Enter
->pip install -r requirements.txt # Install the provided libs
+>conda create -n vqa python=3.6.8 # Create env
+>conda activate vqa # Enter
+>git clone https://github.com/doc-doc/NExT-QA.git # download
+>pip install -r requirements.txt # Install the provided libs #cd NExT-QA and install libs
 ```
 ## Data Preparation
 Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are three zip files correspond to 1) appearance and motion feature for video representation, 2) finetuned BERT feature for QA-pair representation, and 3) annotations of QAs and GloVe Embeddings. After downloading the data, please create a folder ['data'] at the same directory as NExT-QA (this repo), then unzip the video and QA features into it. You will have directories like ['data/vid_feat/*' and 'data/qas_bert/*']. Please unzip the file 'nextqa.zip' into ['NExT-QA/dataset/nextqa']. 
@@ -44,7 +45,8 @@ It will train the model and save to ['models']
 |Result| ![](https://media.giphy.com/media/htciIcJZ2q7pb06zoI/giphy.gif) | ![](https://media.giphy.com/media/dX34r2BJNjVCNCuFNy/giphy.gif)   | ![](https://media.giphy.com/media/ln7xmvrkjcX47W9Kax/giphy.gif)|![](https://media.giphy.com/media/h5uiVR9ukJLVRgT9yC/giphy.gif)|
 |Query| person-ride-horse       | person-ride-bicycle          |   person-drive-car     |  bicycle-move_toward-car|
 |Result| ![](https://media.giphy.com/media/J5jSa7lJxwFXorWYbx/giphy.gif) | ![](https://media.giphy.com/media/lSsztYWamp6gLfHSfg/giphy.gif)   | ![](https://media.giphy.com/media/S5Kp8KaApxrazkVmcd/giphy.gif)|![](https://media.giphy.com/media/ZE4vFIjfm1BHXP7w0R/giphy.gif)|
-
+## Multi-choice Examples
+![mc example](./images/mul-exp.png)
 ## Citation
 ```
 @inproceedings{xiao2021nextqa,
