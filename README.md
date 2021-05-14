@@ -1,4 +1,4 @@
-# NExT-QA
+# NExT-QA # ![](images/vqa-logo.png)
 
 We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset published on CVPR2021 (with 1 Strong Accept and 2 Weak Accepts). 
 
