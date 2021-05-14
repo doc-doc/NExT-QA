@@ -60,10 +60,10 @@ It will train the model and save to ['models']
 ![vis mc_oe](./images/res-mc-oe.png)
 ## Citation
 ```
-@inproceedings{xiao2021nextqa,
+@inproceedings{Xiao2021NExT-QA,
   title={NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions},
   author={Xiao, Junbin and Shang, Xindi and Angela Yao and Chua, Tat-Seng},
-  booktitle={Computer Vision and Pattern Recognition (CVPR)},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
   organization={IEEE}
 }
