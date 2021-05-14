@@ -39,14 +39,20 @@ If you want to train the model, please run
 >./main.sh 0 train # Train the model with GPU id 0
 ```
 It will train the model and save to ['models']
-## Visualization
-|Query| bicycle-jump_beneath-person       | person-feed-elephant          | person-stand_above-bicycle       | dog-watch-turtle|
-|:---| --------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------------- | 
-|Result| ![](https://media.giphy.com/media/htciIcJZ2q7pb06zoI/giphy.gif) | ![](https://media.giphy.com/media/dX34r2BJNjVCNCuFNy/giphy.gif)   | ![](https://media.giphy.com/media/ln7xmvrkjcX47W9Kax/giphy.gif)|![](https://media.giphy.com/media/h5uiVR9ukJLVRgT9yC/giphy.gif)|
-|Query| person-ride-horse       | person-ride-bicycle          |   person-drive-car     |  bicycle-move_toward-car|
-|Result| ![](https://media.giphy.com/media/J5jSa7lJxwFXorWYbx/giphy.gif) | ![](https://media.giphy.com/media/lSsztYWamp6gLfHSfg/giphy.gif)   | ![](https://media.giphy.com/media/S5Kp8KaApxrazkVmcd/giphy.gif)|![](https://media.giphy.com/media/ZE4vFIjfm1BHXP7w0R/giphy.gif)|
-## Multi-choice Examples
-![mc example](./images/mul-exp.png)
+## Accuracy on validation set
+| Methods                  | Text Rep. | Acc_C | Acc_T | Acc_D | Acc | Text Rep. | Acc_C | Acc_T | Acc_D | Acc   |
+| -------------------------| --------: | ----: | ----: | ----: | ---:| --------: | ----: | ----: | ----: | ----: |
+| EVQA                     |   GloVe   | 28.69 | 31.27 | 41.44 | 31.51 | BERT-FT | 42.64 | 46.34 | 45.82 | 44.24 |
+| [PSAC](https) [AAAI19]   |   GloVe   | 34.18 | 31.51 | 48.65 | 35.57 | BERT-FT | - | - | - | - |
+| [PSAC+](https) (+motion) [AAAI19]| GloVe | 33.68 | 32.69 | 50.84 | 36.03 | BERT-FT | - | - | - | - |
+| [CoMem](https) [CVPR18]  |  GloVe | 35.10 | 37.28 | 50.45 | 38.19 | BERT-FT | 45.22 | 49.07 | 55.34 | 48.04 |
+| [STVQA](https) [CVPR17]  |  GloVe | 36.25 | 36.29 | 55.21 | 39.21 | BERT-FT | 44.76 | 49.26 | 55.86 | 47.94 |
+| [HGA](https) [AAAI20]    |  GloVe | 35.71 | 38.40 | 55.60 | 39.67 | BERT-FT | 46.26 | 50.74 | 59.33 | 49.74 |
+| [HME](https) [CVPR19]    |  GloVe | 37.97 | 36.91 | 51.87 | 39.79 | BERT-FT | 46.18 | 48.20 | 58.30 | 48.72 |
+| [HCRN](https) [CVPR20]   |  GloVe | 39.09 | 40.01 | 49.16 | 40.95 | BERT-FT | 45.91 | 49.26 | 53.67 | 48.20 |
+| **Human**                |    -   | **87.61** | **88.56** | **90.40** | **88.38** |  -  | **87.61** | **88.56** | **90.40** | **88.38** |
+## Multi-choice QA v.s Open-ended QA
+![vis mc_oe](./images/res-mc-oe.png)
 ## Citation
 ```
 @inproceedings{xiao2021nextqa,
