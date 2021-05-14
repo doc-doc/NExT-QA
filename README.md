@@ -16,7 +16,7 @@ Please create an envs for this project using anaconda3 (should install [anaconda
 >pip install -r requirements.txt # Install the provided libs
 ```
 ## Data Preparation
-Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are three zip files correspond to 1) appearance and motion feature for video representation, 2) Finetuned BERT feature for QA-pair representation, and 3) Annotations of QAs and GloVe features for related words. After downloading the data, please create a folder ['data'] at the same directory as NExT-QA (this repo), then unzip the video and QA features into it. You will have directories like ['data/vid_feat/*' and 'data/qas_bert/*']. Please unzip the file 'nextqa.zip' into ['NExT-QA/dataset/nextqa']. (Note that the test set is held out.) 
+Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are three zip files correspond to 1) appearance and motion feature for video representation, 2) finetuned BERT feature for QA-pair representation, and 3) annotations of QAs and GloVe Embeddings. After downloading the data, please create a folder ['data'] at the same directory as NExT-QA (this repo), then unzip the video and QA features into it. You will have directories like ['data/vid_feat/*' and 'data/qas_bert/*']. Please unzip the file 'nextqa.zip' into ['NExT-QA/dataset/nextqa']. 
 
 You are also encouraged to design your own pre-computed video features. In that case, please download the raw videos from [VidOR](https://xdshang.github.io/docs/vidor.html). As NExT-QA's videos are sourced from VidOR, you can easily link the QA annotations with the corresponding videos according to the key 'video' in the [nextqa/*.csv] files, during which you may need the map file ['nextqa/map_vid_vidorID.json'].
 
@@ -45,20 +45,15 @@ It will train the model and save to ['models']
 |Query| person-ride-horse       | person-ride-bicycle          |   person-drive-car     |  bicycle-move_toward-car|
 |Result| ![](https://media.giphy.com/media/J5jSa7lJxwFXorWYbx/giphy.gif) | ![](https://media.giphy.com/media/lSsztYWamp6gLfHSfg/giphy.gif)   | ![](https://media.giphy.com/media/S5Kp8KaApxrazkVmcd/giphy.gif)|![](https://media.giphy.com/media/ZE4vFIjfm1BHXP7w0R/giphy.gif)|
 
-## Note  
-If you find the code useful in your research, please kindly cite:
-
+## Citation
 ```
-@inproceedings{xiao2020visual,
-  title={Visual Relation Grounding in Videos},
-  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},
-  booktitle={European Conference on Computer Vision},
-  pages={447--464},
-  year={2020},
-  organization={Springer}
+@inproceedings{xiao2021nextqa,
+  title={NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions},
+  author={Xiao, Junbin and Shang, Xindi and Angela Yao and Chua, Tat-Seng},
+  booktitle={Computer Vision and Pattern Recognition (CVPR)},
+  year={2021},
+  organization={IEEE}
 }
 ```
-
-## License
-
-NUS © [NExT](https://nextcenter.org/)
+## Acknowledgement
+Our reproduction of the methods are based on the respective official code repositories, we thanks the authors to release their code. If you use the related code, please cite the corresponding paper which we have commented in the code.
