@@ -17,9 +17,15 @@ Please create an env for this project using anaconda3 (should install [anaconda]
 >pip install -r requirements.txt
 ```
 ## Data Preparation
-Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are three zip files correspond to 1) appearance and motion feature for video representation, 2) finetuned BERT feature for QA-pair representation, and 3) annotations of QAs and GloVe Embeddings. After downloading the data, please create a folder ['data'] at the same directory as NExT-QA (this repo), then unzip the video and QA features into it. You will have directories like ['data/vid_feat/' and 'data/qas_bert/']. Please unzip the file 'nextqa.zip' into ['NExT-QA/dataset/nextqa']. 
+Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are 4 zip files: 
+- ```['vid_feat.zip']```: Appearance and motion feature for video representation, 
+- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation, 
+- ```['nextqa.zip']```: Annotations of QAs and GloVe Embeddings. 
+- ```['models.zip']```: Learned HGA model. 
 
-You are also encouraged to design your own pre-computed video features. In that case, please download the raw videos from [VidOR](https://xdshang.github.io/docs/vidor.html). As NExT-QA's videos are sourced from VidOR, you can easily link the QA annotations with the corresponding videos according to the key 'video' in the [nextqa/*.csv] files, during which you may need the map file ['nextqa/map_vid_vidorID.json'].
+After downloading the data, please create a folder ```['data']``` at the same directory as ```['NExT-QA']```, then unzip the video and QA features into it. You will have directories like ```['data/vid_feat/', 'data/qas_bert/' and 'NExT-QA/']``` in your workspace. Please unzip the files ```['nextqa.zip']``` into ```['NExT-QA/dataset/nextqa']``` and ```['models.zip']``` into ```['NExT-QA/models/']```. 
+
+*You are also encouraged to design your own pre-computed video features. In that case, please download the raw videos from [VidOR](https://xdshang.github.io/docs/vidor.html). As NExT-QA's videos are sourced from VidOR, you can easily link the QA annotations with the corresponding videos according to the key 'video' in the [nextqa/*.csv] files, during which you may need the map file ['nextqa/map_vid_vidorID.json'].
 
 
 ## Usage
@@ -39,7 +45,7 @@ If you want to train the model, please run
 >./main.sh 0 train # Train the model with GPU id 0
 ```
 It will train the model and save to ['models']
-## Accuracy on validation set
+## Results
 | Methods                  | Text Rep. | Acc_C | Acc_T | Acc_D | Acc | Text Rep. | Acc_C | Acc_T | Acc_D | Acc   |
 | -------------------------| --------: | ----: | ----: | ----: | ---:| --------: | ----: | ----: | ----: | ----: |
 | BlindQA                  |   GloVe   | 26.89 | 30.83 | 32.60 | 30.60 | BERT-FT | 42.62 | 45.53 | 43.89 | 43.76 |
@@ -63,4 +69,4 @@ It will train the model and save to ['models']
 }
 ```
 ## Acknowledgement
-Our reproduction of the methods are based on the respective official code repositories, we thanks the authors to release their code. If you use the related parts, please cite the corresponding paper which we have commented in the code.
+Our reproduction of the methods are based on the respective official repositories, we thanks the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code.
