@@ -3,7 +3,7 @@ import dataloader
 from build_vocab import Vocabulary
 from utils import *
 import argparse
-import mul_eval
+import eval_mc
 
 
 def main(args):
@@ -13,7 +13,7 @@ def main(args):
         batch_size = 64
         num_worker = 8
     else:
-        batch_size = 64 # change to 4 for evaluation (divisible for val_size/test_size).
+        batch_size = 4 # change to 64 for realtime evaluation during training (faster).
         num_worker = 8
     spatial = False
     if spatial:
@@ -55,7 +55,7 @@ def main(args):
     if mode != 'train':
         result_file = f'results/{model_type}-{model_prefix}-{mode}.json'
         vqa.predict(model_file, result_file)
-        mul_eval.main(result_file, mode)
+        eval_mc.main(result_file, mode)
     else:
         #Model for resume-training.
         model_file = f'{model_type}-{model_prefix}-0-00.00.ckpt'

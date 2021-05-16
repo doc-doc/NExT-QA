@@ -1,5 +1,2 @@
 .idea
-tools/*
-dataset/nextqa/*
 __pycache__
-models/*

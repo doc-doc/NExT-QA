@@ -9,8 +9,6 @@ import json
 import string
 import h5py
 import pickle as pkl
-from sklearn.preprocessing import normalize
-from transformers import BertTokenizer
 
 class VidQADataset(Dataset):
     """load the dataset in dataloader"""

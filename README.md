@@ -6,7 +6,7 @@ NExT-QA is a VideoQA benchmark to advance video understanding from describing to
 
 ## Environment
 
-Anaconda 3, python 3.6.8, pytorch 1.6 and cuda 10.2. For others libs, please refer to the file requirements.txt.
+Anaconda 4.8.4, python 3.6.8, pytorch 1.6 and cuda 10.2. For others libs, please refer to the file requirements.txt.
 
 ## Install
 Please create an env for this project using anaconda3 (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
@@ -18,12 +18,12 @@ Please create an env for this project using anaconda3 (should install [anaconda]
 ```
 ## Data Preparation
 Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are 4 zip files: 
-- ```['vid_feat.zip']```: Appearance and motion feature for video representation, 
-- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation, 
+- ```['vid_feat.zip']```: Appearance and motion feature for video representation.
+- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation.
 - ```['nextqa.zip']```: Annotations of QAs and GloVe Embeddings. 
 - ```['models.zip']```: Learned HGA model. 
 
-After downloading the data, please create a folder ```['data']``` at the same directory as ```['NExT-QA']```, then unzip the video and QA features into it. You will have directories like ```['data/vid_feat/', 'data/qas_bert/' and 'NExT-QA/']``` in your workspace. Please unzip the files ```['nextqa.zip']``` into ```['NExT-QA/dataset/nextqa']``` and ```['models.zip']``` into ```['NExT-QA/models/']```. 
+After downloading the data, please create a folder ```['data']``` at the same directory as ```['NExT-QA']```, then unzip the video and QA features into it. You will have directories like ```['data/vid_feat/', 'data/qas_bert/' and 'NExT-QA/']``` in your workspace. Please unzip the files in ```['nextqa.zip']``` into ```['NExT-QA/dataset/nextqa']``` and ```['models.zip']``` into ```['NExT-QA/models/']```. 
 
 *(You are also encouraged to design your own pre-computed video features. In that case, please download the raw videos from [VidOR](https://xdshang.github.io/docs/vidor.html). As NExT-QA's videos are sourced from VidOR, you can easily link the QA annotations with the corresponding videos according to the key 'video' in the ```['nextqa/.csv']``` files, during which you may need the map file ```['nextqa/map_vid_vidorID.json']```)*.
 
@@ -32,7 +32,7 @@ After downloading the data, please create a folder ```['data']``` at the same di
 Once the data is ready, you can easily run the code. First, to test the environment and code, we provide the prediction and model of the SOTA approach (i.e., HGA) on NExT-QA. 
 You can get the results reported in the paper by running: 
 ```
->python mul_eval.py
+>python eval_mc.py
 ```
 The command above will load the prediction file under ['results/'] and evaluate it. 
 You can also obtain the prediction by running: 
@@ -44,7 +44,7 @@ If you want to train the model, please run
 ```
 >./main.sh 0 train # Train the model with GPU id 0
 ```
-It will train the model and save to ['models']
+It will train the model and save to ['models']. (*The results may be slightly different depending on the environments*)
 ## Results
 | Methods                  | Text Rep. | Acc_C | Acc_T | Acc_D | Acc | Text Rep. | Acc_C | Acc_T | Acc_D | Acc   |
 | -------------------------| --------: | ----: | ----: | ----: | ---:| --------: | ----: | ----: | ----: | ----: |
