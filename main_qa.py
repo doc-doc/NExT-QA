@@ -13,7 +13,7 @@ def main(args):
         batch_size = 64
         num_worker = 8
     else:
-        batch_size = 4 # change to 64 for realtime evaluation during training (faster).
+        batch_size = 64 # change to 64 for realtime evaluation during training (faster).
         num_worker = 8
     spatial = False
     if spatial:

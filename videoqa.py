@@ -1,6 +1,7 @@
 from networks import EncoderRNN, VQAModel, embed_loss
 from utils import *
 from torch.optim.lr_scheduler import ReduceLROnPlateau
+import torch
 import torch.nn as nn
 import time
 
