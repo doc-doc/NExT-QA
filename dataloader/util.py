@@ -1,9 +1,3 @@
-# ====================================================
-# @Time    : 11/14/19 10:53 PM
-# @Author  : Xiao Junbin
-# @Email   : junbin@comp.nus.edu.sg
-# @File    : util.py
-# ====================================================
 import json
 import os
 import os.path as osp
@@ -54,37 +48,4 @@ def pkdump(data, file):
     with open(file, 'wb') as fp:
         pkl.dump(data, fp)
 
-
-def get_video_frames(video_relation_file):
-
-    folders = load_file(video_relation_file)
-    vframes = {}
-    for recode in folders:
-        video, nframe = recode[0], recode[1]
-        if video not in vframes:
-            vframes[video] = nframe
-        else:
-            continue
-
-    all_frames = []
-    sample_num = 512
-    # miss_videos = load_file('dataset/vidor/miss_videos.json')
-    print(len(vframes))
-
-    for video, nframe in vframes.items():
-        #if video not in miss_videos: continue
-        #if video not in ['1021/3726334221', '0003/6855479096']: continue
-        samples = np.round(np.linspace(
-            1, nframe, sample_num))
-
-        samples = set([int(s) for s in samples])
-        samples = list(samples)
-        fnames = [osp.join(video, str(fid).zfill(6)) for fid in samples]
-        if all_frames == []:
-            all_frames = fnames
-        else:
-            all_frames.extend(fnames)
-
-    print(len(all_frames))
-    return all_frames
 

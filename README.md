@@ -6,10 +6,10 @@ NExT-QA is a VideoQA benchmark to advance video understanding from describing to
 
 ## Environment
 
-Anaconda 4.8.4, python 3.6.8, pytorch 1.6 and cuda 10.2. For others libs, please refer to the file requirements.txt.
+Anaconda 4.8.4, python 3.6.8, pytorch 1.6 and cuda 10.2. For other libs, please refer to the file requirements.txt.
 
 ## Install
-Please create an env for this project using anaconda3 (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
+Please create an env for this project using anaconda (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
 ```
 >conda create -n videoqa python=3.6.8
 >conda activate videoqa

@@ -74,8 +74,8 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--caption_path', type=str, 
-                        default='dataset/VideoQA/train.csv',
+    parser.add_argument('--anno_path', type=str, 
+                        default='dataset/nextqa/train.csv',
                         help='path for train annotation file')
     parser.add_argument('--vocab_path', type=str, default='dataset/VideoQA/vocab.pkl',
                         help='path for saving vocabulary wrapper')

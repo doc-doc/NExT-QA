@@ -47,9 +47,6 @@ class VidQADataset(Dataset):
     def get_video_feature(self, video_name):
         """
         :param video_name:
-        :param frame_count:
-        :param width:
-        :param height:
         :return:
         """
         if self.use_frame:
