@@ -2,7 +2,7 @@
 
 We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset published on CVPR2021 (with 1 Strong Accept and 2 Weak Accepts). 
 
-NExT-QA is a VideoQA benchmark to advance video understanding from describing to explaining the temporal actions. It is unique in that it goes beyond descriptive QA (what is) to benchmark causal and temporal action reasoning (why/how did) in realistic videos and it is also rich in object interactions. We set up both multi-choice and open-ended QA tasks on the dataset. This repo. provides resources for multi-choice QA. Open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/junbin.github.io/docs/nextqa.html) page.
+NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/junbin.github.io/docs/nextqa.html) page.
 
 ## Environment
 
@@ -53,8 +53,8 @@ It will train the model and save to ['models']. (*The results may be slightly di
 | [STVQA](https://openaccess.thecvf.com/content_cvpr_2017/papers/Jang_TGIF-QA_Toward_Spatio-Temporal_CVPR_2017_paper.pdf) [CVPR17]  |   GloVe   | 36.25 | 36.29 | 55.21 | 39.21 | BERT-FT | 44.76 | 49.26 | 55.86 | 47.94 |
 | [CoMem](https://openaccess.thecvf.com/content_cvpr_2018/CameraReady/1924.pdf) [CVPR18]  |   GloVe   | 35.10 | 37.28 | 50.45 | 38.19 | BERT-FT | 45.22 | 49.07 | 55.34 | 48.04 |
 | [HME](https://openaccess.thecvf.com/content_CVPR_2019/papers/Fan_Heterogeneous_Memory_Enhanced_Multimodal_Attention_Model_for_Video_Question_Answering_CVPR_2019_paper.pdf) [CVPR19]    |   GloVe   | 37.97 | 36.91 | 51.87 | 39.79 | BERT-FT | 46.18 | 48.20 | 58.30 | 48.72 |
-| [HGA](https://ojs.aaai.org//index.php/AAAI/article/view/6767) [AAAI20]    |   GloVe   | 35.71 | 38.40 | **55.60** | 39.67 | BERT-FT | **46.26** | **50.74** | **59.33** | **49.74** |
 | [HCRN](https://openaccess.thecvf.com/content_CVPR_2020/papers/Le_Hierarchical_Conditional_Relation_Networks_for_Video_Question_Answering_CVPR_2020_paper.pdf) [CVPR20]   |   GloVe   | **39.09** | **40.01** | 49.16 | **40.95** | BERT-FT | 45.91 | 49.26 | 53.67 | 48.20 |
+| [HGA](https://ojs.aaai.org//index.php/AAAI/article/view/6767) [AAAI20]    |   GloVe   | 35.71 | 38.40 | **55.60** | 39.67 | BERT-FT | **46.26** | **50.74** | **59.33** | **49.74** |
 | **Human**                |    -      | **87.61** | **88.56** | **90.40** | **88.38** |  -  | **87.61** | **88.56** | **90.40** | **88.38** |
 ## Multi-choice QA v.s Open-ended QA
 ![vis mc_oe](./images/res-mc-oe.png)
