@@ -69,4 +69,4 @@ It will train the model and save to ['models']. (*The results may be slightly di
 }
 ```
 ## Acknowledgement
-Our reproduction of the methods are based on the respective official repositories, we thanks the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code.
+Our reproduction of the methods are based on the respective official repositories, we thank the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code.
