@@ -69,7 +69,7 @@ It will train the model and save to ['models']. (*The results may be slightly di
 }
 ```
 ## Todo
-1. [ ] Release test data
+1. [ ] Open online [evaluation server]() and release test data.
 2. [ ] Release spatial feature.
 3. [ ] Release RoI feature.
 ## Acknowledgement
