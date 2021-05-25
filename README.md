@@ -1,6 +1,6 @@
 # NExT-QA <img src="images/logo.png" height="64" width="128">
 
-We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset published on CVPR2021 (with 1 Strong Accept and 2 Weak Accepts). 
+We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset accepted to CVPR2021 (with 1 'Strong Accept' and 2 'Weak Accept's). 
 
 NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/junbin.github.io/docs/nextqa.html) page.
 
@@ -14,12 +14,12 @@ Please create an env for this project using anaconda (should install [anaconda](
 >conda create -n videoqa python=3.6.8
 >conda activate videoqa
 >git clone https://github.com/doc-doc/NExT-QA.git
->pip install -r requirements.txt
+>pip install -r requirements.txt #may take some time to install
 ```
 ## Data Preparation
 Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are 4 zip files: 
-- ```['vid_feat.zip']```: Appearance and motion feature for video representation.
-- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation.
+- ```['vid_feat.zip']```: Appearance and motion feature for video representation (with code provided by [HCRN](https://github.com/thaolmk54/hcrn-videoqa)).
+- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation (based on [pytorch-pretrained-BERT](https://github.com/LuoweiZhou/pytorch-pretrained-BERT/).
 - ```['nextqa.zip']```: Annotations of QAs and GloVe Embeddings. 
 - ```['models.zip']```: Learned HGA model. 
 
@@ -69,7 +69,7 @@ It will train the model and save to ['models']. (*The results may be slightly di
 }
 ```
 ## Todo
-1. [ ] Open online [evaluation server]() and release test data.
+1. [ ] Open [evaluation server]() and release test data.
 2. [ ] Release spatial feature.
 3. [ ] Release RoI feature.
 ## Acknowledgement

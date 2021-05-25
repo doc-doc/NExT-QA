@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-from . import torchnlp_nn as nlpnn
+import torchnlp_nn as nlpnn
 
 
 def padding_mask(seq_q, seq_k):

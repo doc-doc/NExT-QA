@@ -1,11 +1,10 @@
 import nltk
-# nltk.download('punkt')
+# nltk.download('punkt') #uncomment it if you are run the first fime
 import pickle
 import argparse
 from utils import load_file, save_file
 from collections import Counter
 import string
-
 
 
 class Vocabulary(object):

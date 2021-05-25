@@ -17,7 +17,7 @@ def main(args):
         num_worker = 8
     spatial = False
     if spatial:
-        #STVQA only
+        #STVQA
         video_feature_path = '../data/feats/spatial/'
         video_feature_cache = '../data/feats/cache/'
     else:
@@ -31,7 +31,7 @@ def main(args):
     glove_embed = 'dataset/{}/glove_embed.npy'.format(dataset)
     use_bert = True #Otherwise GloVe
     checkpoint_path = 'models'
-    model_type = 'HGA' #(EVQA, STVQA, CoMem, HME, HGA)
+    model_type = 'CoMem' #(EVQA, CoMem, HME, HGA)
     model_prefix= 'bert-ft-h256'
 
     vis_step = 106

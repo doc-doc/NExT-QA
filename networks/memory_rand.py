@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from .Attention import MultiModalAttentionModule
+from Attention import MultiModalAttentionModule
      
 class MemoryRamModule(nn.Module):
 

@@ -2,7 +2,7 @@ import os.path as osp
 from utils import load_file
 
 
-def accuracy(sample_list_file, result_file):
+def accuracy_metric(sample_list_file, result_file):
 
     sample_list = load_file(sample_list_file)
     group = {'CW':[], 'CH':[], 'TN':[], 'TC':[], 'DC':[], 'DL':[], 'DO':[]}
@@ -59,7 +59,7 @@ def main(result_file, mode='val'):
     sample_list_file = osp.join(dataset_dir, data_set+'.csv')
     print('Evaluating {}'.format(result_file))
 
-    accuracy(sample_list_file, result_file)
+    accuracy_metric(sample_list_file, result_file)
 
 
 

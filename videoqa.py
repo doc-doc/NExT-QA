@@ -1,4 +1,5 @@
-from networks import EncoderRNN, VQAModel, embed_loss
+from networks import EncoderRNN, embed_loss
+from networks.VQAModel import EVQA, STVQA, CoMem, HME, HGA
 from utils import *
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import torch
@@ -42,7 +43,7 @@ class VideoQA():
             qns_encoder = EncoderRNN.EncoderQns(word_dim, hidden_dim, vocab_size, self.glove_embed, self.use_bert, n_layers=1,
                                                 input_dropout_p=0.2, rnn_dropout_p=0, bidirectional=False, rnn_cell='lstm')
 
-            self.model = VQAModel.EVQA(vid_encoder, qns_encoder, self.device)
+            self.model = EVQA.EVQA(vid_encoder, qns_encoder, self.device)
 
         elif self.model_type == 'STVQA':
             #CVPR17
@@ -53,7 +54,7 @@ class VideoQA():
             qns_encoder = EncoderRNN.EncoderQns(word_dim, hidden_dim, vocab_size, self.glove_embed, self.use_bert,
                                                 input_dropout_p=0.2, rnn_dropout_p=0.5, n_layers=2, rnn_cell='lstm')
 
-            self.model = VQAModel.STVQA(vid_encoder, qns_encoder, att_dim, self.device)
+            self.model = STVQA.STVQA(vid_encoder, qns_encoder, att_dim, self.device)
 
 
         elif self.model_type == 'CoMem':
@@ -66,7 +67,7 @@ class VideoQA():
             qns_encoder = EncoderRNN.EncoderQns(word_dim, hidden_dim, vocab_size, self.glove_embed, self.use_bert, n_layers=2,
                                                 rnn_dropout_p=0.5, input_dropout_p=0.2, bidirectional=False, rnn_cell='lstm')
 
-            self.model = VQAModel.CoMem(vid_encoder, qns_encoder, max_vid_len, max_qa_len, self.device)
+            self.model = CoMem.CoMem(vid_encoder, qns_encoder, max_vid_len, max_qa_len, self.device)
 
         elif self.model_type == 'HME':
             #CVPR19
@@ -79,11 +80,11 @@ class VideoQA():
                                                 rnn_dropout_p=0.5, input_dropout_p=0.2, bidirectional=False, rnn_cell='lstm')
 
 
-            self.model = VQAModel.HME(vid_encoder, qns_encoder, max_vid_len, max_qa_len, self.device)
+            self.model = HME.HME(vid_encoder, qns_encoder, max_vid_len, max_qa_len, self.device)
 
         elif self.model_type == 'HGA':
             #AAAI20
-            hidden_dim = 256
+            hidden_dim = 256 #better than 512
             vid_encoder = EncoderRNN.EncoderVidHGA(vid_dim, hidden_dim, input_dropout_p=0.3,
                                                      bidirectional=False, rnn_cell='gru')
 
@@ -91,7 +92,7 @@ class VideoQA():
                                                 rnn_dropout_p=0, input_dropout_p=0.3, bidirectional=False,
                                                 rnn_cell='gru')
 
-            self.model = VQAModel.HGA(vid_encoder, qns_encoder, self.device)
+            self.model = HGA.HGA(vid_encoder, qns_encoder, self.device)
 
 
         params = [{'params':self.model.parameters()}]
