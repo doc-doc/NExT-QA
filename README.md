@@ -18,8 +18,8 @@ Please create an env for this project using anaconda (should install [anaconda](
 ```
 ## Data Preparation
 Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are 4 zip files: 
-- ```['vid_feat.zip']```: Appearance and motion feature for video representation (with code provided by [HCRN](https://github.com/thaolmk54/hcrn-videoqa)).
-- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation (based on [pytorch-pretrained-BERT](https://github.com/LuoweiZhou/pytorch-pretrained-BERT/).
+- ```['vid_feat.zip']```: Appearance and motion feature for video representation. (With code provided by [HCRN](https://github.com/thaolmk54/hcrn-videoqa)).
+- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation. (Based on [pytorch-pretrained-BERT](https://github.com/LuoweiZhou/pytorch-pretrained-BERT/)).
 - ```['nextqa.zip']```: Annotations of QAs and GloVe Embeddings. 
 - ```['models.zip']```: Learned HGA model. 
 
@@ -69,7 +69,7 @@ It will train the model and save to ['models']. (*The results may be slightly di
 }
 ```
 ## Todo
-1. [ ] Open [evaluation server]() and release test data.
+1. [ ] Open evaluation server and release test data.
 2. [ ] Release spatial feature.
 3. [ ] Release RoI feature.
 ## Acknowledgement

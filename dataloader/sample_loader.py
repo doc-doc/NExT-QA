@@ -1,14 +1,10 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
-from .util import load_file, pkdump, pkload
+from .util import load_file
 import os.path as osp
 import numpy as np
 import nltk
-import pandas as pd
-import json
-import string
 import h5py
-import pickle as pkl
 
 class VidQADataset(Dataset):
     """load the dataset in dataloader"""

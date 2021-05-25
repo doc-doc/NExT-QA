@@ -119,7 +119,7 @@ class VideoQA():
         :return:
         """
         model_path = osp.join(self.model_dir, model_file)
-        print(f'Warm-start (or test) with model {model_path}')
+        print(f'Warm-start (or test) with model: {model_path}')
         model_dict = torch.load(model_path)
         new_model_dict = {}
         for k, v in self.model.state_dict().items():

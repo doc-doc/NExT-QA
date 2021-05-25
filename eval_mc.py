@@ -1,6 +1,7 @@
 import os.path as osp
 from utils import load_file
 
+map_name = {'CW': 'Why', 'CH': 'How', 'TN': 'Bef&Aft', 'TC': 'When', 'DC': 'Cnt', 'DL': 'Loc', 'DO': 'Other', 'C': 'Acc_C', 'T': 'Acc_T', 'D': 'Acc_D'}
 
 def accuracy_metric(sample_list_file, result_file):
 
@@ -39,13 +40,13 @@ def accuracy_metric(sample_list_file, result_file):
         all_acc += acc
         all_cnt += cnt
 
-    print('')
+
     for qtype, value in overall_acc.items():
         group_acc[qtype] = value
         group_cnt[qtype] = overall_cnt[qtype]
 
     for qtype in group_acc:
-        print(qtype, end='\t')
+        print(map_name[qtype], end='\t')
     print('')
     for qtype, acc in group_acc.items():
         print('{:.2f}'.format(acc*100.0/group_cnt[qtype]), end ='\t')
@@ -62,11 +63,10 @@ def main(result_file, mode='val'):
     accuracy_metric(sample_list_file, result_file)
 
 
-
 if __name__ == "__main__":
     model_type = 'HGA'
     mode = 'val'
-    model_prefix = 'bert-ft-h256-{}'.format(mode)
+    model_prefix = 'bert-ft-h256-{}-example'.format(mode)
     result_file = 'results/{}-{}.json'.format(model_type, model_prefix)
 
     main(result_file, mode)

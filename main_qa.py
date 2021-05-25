@@ -13,7 +13,7 @@ def main(args):
         batch_size = 64
         num_worker = 8
     else:
-        batch_size = 64
+        batch_size = 64 #you may need to change to a number that is divisible by the size of test/val set, e.g., 4
         num_worker = 8
     spatial = False
     if spatial:
@@ -31,7 +31,7 @@ def main(args):
     glove_embed = 'dataset/{}/glove_embed.npy'.format(dataset)
     use_bert = True #Otherwise GloVe
     checkpoint_path = 'models'
-    model_type = 'CoMem' #(EVQA, CoMem, HME, HGA)
+    model_type = 'HGA' #(EVQA, CoMem, HME, HGA)
     model_prefix= 'bert-ft-h256'
 
     vis_step = 106
