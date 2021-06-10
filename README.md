@@ -11,7 +11,7 @@ Anaconda 4.8.4, python 3.6.8, pytorch 1.6 and cuda 10.2. For other libs, please 
 ## Install
 Please create an env for this project using anaconda (should install [anaconda](https://docs.anaconda.com/anaconda/install/linux/) first)
 ```
->conda create -n videoqa python=3.6.8
+>conda create -n videoqa python==3.6.8
 >conda activate videoqa
 >git clone https://github.com/doc-doc/NExT-QA.git
 >pip install -r requirements.txt #may take some time to install
