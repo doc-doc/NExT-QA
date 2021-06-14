@@ -21,7 +21,7 @@ Please download the pre-computed features and QA annotations from [here](https:/
 - ```['vid_feat.zip']```: Appearance and motion feature for video representation. (With code provided by [HCRN](https://github.com/thaolmk54/hcrn-videoqa)).
 - ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation. (Based on [pytorch-pretrained-BERT](https://github.com/LuoweiZhou/pytorch-pretrained-BERT/)).
 - ```['nextqa.zip']```: Annotations of QAs and GloVe Embeddings. 
-- ```['models.zip']```: Learned HGA model. 
+- ```['models.zip']```: HGA model. 
 
 After downloading the data, please create a folder ```['data/feats']``` at the same directory as ```['NExT-QA']```, then unzip the video and QA features into it. You will have directories like ```['data/feats/vid_feat/', 'data/feats/qas_bert/' and 'NExT-QA/']``` in your workspace. Please unzip the files in ```['nextqa.zip']``` into ```['NExT-QA/dataset/nextqa']``` and ```['models.zip']``` into ```['NExT-QA/models/']```. 
 
