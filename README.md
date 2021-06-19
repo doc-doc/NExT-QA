@@ -60,11 +60,13 @@ It will train the model and save to ['models']. (*The results may be slightly di
 ![vis mc_oe](./images/res-mc-oe.png)
 ## Citation
 ```
-@article{xiao2021next,
-  title={NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions},
-  author={Xiao, Junbin and Shang, Xindi and Yao, Angela and Chua, Tat-Seng},
-  journal={arXiv preprint arXiv:2105.08276},
-  year={2021}
+@InProceedings{Xiao_2021_CVPR,
+    author    = {Xiao, Junbin and Shang, Xindi and Yao, Angela and Chua, Tat-Seng},
+    title     = {NExT-QA: Next Phase of Question-Answering to Explaining Temporal Actions},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {9777-9786}
 }
 ```
 ## Todo
@@ -72,4 +74,4 @@ It will train the model and save to ['models']. (*The results may be slightly di
 2. [ ] Release spatial feature.
 3. [ ] Release RoI feature.
 ## Acknowledgement
-Our reproduction of the methods are based on the respective official repositories, we thank the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code.
+Our reproduction of the methods is based on the respective official repositories, we thank the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code.
