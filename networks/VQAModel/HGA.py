@@ -103,7 +103,7 @@ class HGA(nn.Module):
 
         ## attention pool
         local_attn = self.gcn_atten_pool(q_v_output)
-        print(local_attn)
+        # print(local_attn)
         local_out = torch.sum(q_v_output * local_attn, dim=1)
 
         # print(qns_last_hidden.shape, vid_last_hidden.shape)

@@ -13,7 +13,7 @@ def main(args):
         batch_size = 64
         num_worker = 8
     else:
-        batch_size = 64 #you may need to change to a number that is divisible by the size of test/val set, e.g., 4
+        batch_size = 4
         num_worker = 8
     spatial = False
     if spatial:
