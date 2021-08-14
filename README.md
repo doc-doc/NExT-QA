@@ -4,6 +4,11 @@ We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT
 
 NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/docs/nextqa.html) page.
 
+## Todo
+1. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1OuhKqi5IOTm6RDAMJqhRN5lEdZzt3y2i/view?usp=sharing).
+2. [ ] <s>Release spatial feature</s>.
+3. [ ] Release RoI feature.
+
 ## Environment
 
 Anaconda 4.8.4, python 3.6.8, pytorch 1.6 and cuda 10.2. For other libs, please refer to the file requirements.txt.
@@ -69,9 +74,5 @@ It will train the model and save to ['models']. (*The results may be slightly di
     pages     = {9777-9786}
 }
 ```
-## Todo
-1. [ ] Open evaluation server and release test data.
-2. [ ] Release spatial feature.
-3. [ ] Release RoI feature.
 ## Acknowledgement
 Our reproduction of the methods is based on the respective official repositories, we thank the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code.
