@@ -7,7 +7,7 @@ NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It c
 ## Todo
 1. [x] [Relation annotations](https://drive.google.com/file/d/1RW8ck39n-yScGrOZWJ7gBr1jH3Iy4SSl/view?usp=sharing) are available.
 2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1OuhKqi5IOTm6RDAMJqhRN5lEdZzt3y2i/view?usp=sharing).
-3. [ ] <s>Release spatial feature</s>.
+3. [ ] Release [spatial feature]() (valid for 1 week).
 4. [ ] Release RoI feature.
 
 ## Environment
