@@ -14,27 +14,38 @@ class VidQADataset(Dataset):
         self.vocab = vocab
         sample_list_file = osp.join(sample_list_path, '{}.csv'.format(mode))
         self.sample_list = load_file(sample_list_file)
-        self.video_feature_cache = video_feature_cache
         self.max_qa_length = 37
         self.use_bert = use_bert
-        self.use_frame = True
-        self.use_mot = True
+        self.use_frame = True # False for STVQA
+        self.use_mot = True # False for STVQA
+        self.use_spatial = False #True for STVQA
         if self.use_bert:
             self.bert_file = osp.join(video_feature_path, 'qas_bert/bert_ft_{}.h5'.format(mode))
 
-        vid_feat_file = osp.join(video_feature_path, 'vid_feat/app_mot_{}.h5'.format(mode))
-        print('Load {}...'.format(vid_feat_file))
-        self.frame_feats = {}
-        self.mot_feats = {}
-        with h5py.File(vid_feat_file, 'r') as fp:
-            vids = fp['ids']
-            feats = fp['feat']
-            for id, (vid, feat) in enumerate(zip(vids, feats)):
-                if self.use_frame:
-                    self.frame_feats[str(vid)] = feat[:, :2048]  # (16, 2048)
-                if self.use_mot:
-                    self.mot_feats[str(vid)] = feat[:, 2048:]  # (16, 2048)
-
+        if not self.use_spatial:
+            vid_feat_file = osp.join(video_feature_path, 'vid_feat/app_mot_{}.h5'.format(mode))
+            print('Load {}...'.format(vid_feat_file))
+            self.frame_feats = {}
+            self.mot_feats = {}
+            with h5py.File(vid_feat_file, 'r') as fp:
+                vids = fp['ids']
+                feats = fp['feat']
+                for id, (vid, feat) in enumerate(zip(vids, feats)):
+                    if self.use_frame:
+                        self.frame_feats[str(vid)] = feat[:, :2048]  # (16, 2048)
+                    if self.use_mot:
+                        self.mot_feats[str(vid)] = feat[:, 2048:]  # (16, 2048)
+        else:
+            # if you don't have enough memory(>60G), you can read feature from hdf5 at each iteration
+            vid_feat_file = osp.join(video_feature_path, 'spatial_feat/feat_maps_{}.h5'.format(mode))
+            print('Load large file {}...'.format(vid_feat_file))
+            self.spatial_feats = {}
+            with h5py.File(vid_feat_file, 'r') as fp:
+                vids = fp['ids']
+                feats = fp['feat']
+                for id, (vid, feat) in enumerate(zip(vids, feats)):
+                    self.spatial_feats[str(vid)] = feat  # (*, 4096, 7, 7) (obtained by np.concatenate((app, mot), axis=1)
+                   
 
     def __len__(self):
         return len(self.sample_list)
@@ -45,13 +56,17 @@ class VidQADataset(Dataset):
         :param video_name:
         :return:
         """
-        if self.use_frame:
-            app_feat = self.frame_feats[video_name]
-            video_feature = app_feat # (16, 2048)
-        if self.use_mot:
-            mot_feat = self.mot_feats[video_name]
-            video_feature = np.concatenate((video_feature, mot_feat), axis=1) #(16, 4096)
+        if self.use_spatial:
+            video_feature = self.spatial_feats[video_name] #(16, 4096, 7 ,7)
+        else:    
+            if self.use_frame:
+                app_feat = self.frame_feats[video_name]
+                video_feature = app_feat # (16, 2048)
+            if self.use_mot:
+                mot_feat = self.mot_feats[video_name]
+                video_feature = np.concatenate((video_feature, mot_feat), axis=1) #(16, 4096)
 
+        # print(video_feature.shape)
         return torch.from_numpy(video_feature).type(torch.float32)
 
 
@@ -72,7 +87,6 @@ class VidQADataset(Dataset):
             candidates_matrix[k, :qa_lengths[k]] = torch.Tensor(sentence)
 
         return candidates_matrix, qa_lengths
-
 
 
     def __getitem__(self, idx):
@@ -101,7 +115,6 @@ class VidQADataset(Dataset):
         qns_key = video_name + '_' + qid
         qa_lengths = torch.tensor(qa_lengths)
         
-
         return video_feature, candidate_qas, qa_lengths, ans, qns_key
 
 

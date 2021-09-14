@@ -44,9 +44,7 @@ class STVQA(nn.Module):
             out.append(encoder_out)
 
         out = torch.stack(out, 0).transpose(1, 0)
-
         _, predict_idx = torch.max(out, 1)
-
 
         return out, predict_idx
 
