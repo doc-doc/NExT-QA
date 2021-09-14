@@ -5,9 +5,10 @@ We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT
 NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/docs/nextqa.html) page.
 
 ## Todo
-1. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1OuhKqi5IOTm6RDAMJqhRN5lEdZzt3y2i/view?usp=sharing).
-2. [ ] <s>Release spatial feature</s>.
-3. [ ] Release RoI feature.
+1. [x] [Relation annotations](https://drive.google.com/file/d/1RW8ck39n-yScGrOZWJ7gBr1jH3Iy4SSl/view?usp=sharing) are available.
+2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1OuhKqi5IOTm6RDAMJqhRN5lEdZzt3y2i/view?usp=sharing).
+3. [ ] <s>Release spatial feature</s>.
+4. [ ] Release RoI feature.
 
 ## Environment
 
