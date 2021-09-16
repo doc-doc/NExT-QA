@@ -14,15 +14,10 @@ def main(args):
         num_worker = 8
     else:
         batch_size = 4
-        num_worker = 8
-    spatial = False # True for STVQA
-    if spatial:
-        #STVQA
-        video_feature_path = '../data/feats/'
-        video_feature_cache = '../data/feats/cache/'
-    else:
-        video_feature_cache = '../data/feats/cache/'
-        video_feature_path = '../data/feats/'
+        num_worker = 4
+        
+    video_feature_cache = '../data/feats/cache/'
+    video_feature_path = '../data/feats/'
 
     dataset = 'nextqa'
     sample_list_path = 'dataset/{}/'.format(dataset)
