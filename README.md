@@ -9,6 +9,8 @@ NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It c
 2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1OuhKqi5IOTm6RDAMJqhRN5lEdZzt3y2i/view?usp=sharing).
 3. [x] Release [spatial feature](https://drive.google.com/file/d/1yJ30T1oAjJ8cO3nHQID0EmIm-yQHdYkK/view?usp=sharing) (valid for 2 weeks).
 4. [ ] Release RoI feature.
+5. [ ] Release HCRN-BERT code.
+6. [ ] Release BERT finetune code for VQA.
 
 ## Environment
 
@@ -51,7 +53,7 @@ If you want to train the model, please run
 >./main.sh 0 train # Train the model with GPU id 0
 ```
 It will train the model and save to ['models']. (*The results may be slightly different depending on the environments*)
-## Results
+## Results on Val. Set
 | Methods                  | Text Rep. | Acc_C | Acc_T | Acc_D | Acc | Text Rep. | Acc_C | Acc_T | Acc_D | Acc   |
 | -------------------------| --------: | ----: | ----: | ----: | ---:| --------: | ----: | ----: | ----: | ----: |
 | BlindQA                  |   GloVe   | 26.89 | 30.83 | 32.60 | 30.60 | BERT-FT | 42.62 | 45.53 | 43.89 | 43.76 |
@@ -62,6 +64,8 @@ It will train the model and save to ['models']. (*The results may be slightly di
 | [HCRN](https://github.com/thaolmk54/hcrn-videoqa) ([CVPR20](https://openaccess.thecvf.com/content_CVPR_2020/papers/Le_Hierarchical_Conditional_Relation_Networks_for_Video_Question_Answering_CVPR_2020_paper.pdf))   |   GloVe   | **39.09** | **40.01** | 49.16 | **40.95** | BERT-FT | 45.91 | 49.26 | 53.67 | 48.20 |
 | [HGA](https://github.com/doc-doc/NExT-QA/blob/main/networks/VQAModel/HGA.py) ([AAAI20](https://ojs.aaai.org//index.php/AAAI/article/view/6767))   |   GloVe   | 35.71 | 38.40 | **55.60** | 39.67 | BERT-FT | **46.26** | **50.74** | **59.33** | **49.74** |
 | **Human**                |    -      | **87.61** | **88.56** | **90.40** | **88.38** |  -  | **87.61** | **88.56** | **90.40** | **88.38** |
+
+(For comparison, please refer to the results on val/test sets in our paper.)
 ## Multi-choice QA *vs.* Open-ended QA
 ![vis mc_oe](./images/res-mc-oe.png)
 ## Citation
