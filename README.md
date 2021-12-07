@@ -6,7 +6,7 @@ NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It c
 
 ## Todo
 1. [x] [Relation annotations](https://drive.google.com/file/d/1RW8ck39n-yScGrOZWJ7gBr1jH3Iy4SSl/view?usp=sharing) are available.
-2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1OuhKqi5IOTm6RDAMJqhRN5lEdZzt3y2i/view?usp=sharing).
+2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/17ElrOdsttGH2NqGOGr9TNdX44mnSqlrf/view?usp=sharing).
 3. [x] Release [spatial feature](https://drive.google.com/file/d/1yJ30T1oAjJ8cO3nHQID0EmIm-yQHdYkK/view?usp=sharing) (valid for 2 weeks).
 4. [ ] Release RoI feature.
 5. [ ] Release BERT finetune code for VQA.
