@@ -1,6 +1,6 @@
 # ignore all except .gitignore file
 *
 !.gitignore
-!.train.csv
-!.val.csv
-!.test.csv
+!train.csv
+!val.csv
+!test.csv
