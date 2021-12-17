@@ -1,8 +1,6 @@
-# NExT-QA <img src="images/logo.png" height="64" width="128">
+# [NExT-QA](https://arxiv.org/pdf/2105.08276.pdf) <img src="images/logo.png" height="64" width="128">
 
-We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset accepted to CVPR2021. 
-
-NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/docs/nextqa.html) page.
+We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset accepted to CVPR2021. NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/docs/nextqa.html) page.
 
 ## Todo
 1. [x] [Relation annotations](https://drive.google.com/file/d/1RW8ck39n-yScGrOZWJ7gBr1jH3Iy4SSl/view?usp=sharing) are available.
