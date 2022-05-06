@@ -51,7 +51,7 @@ If you want to train the model, please run
 ```
 It will train the model and save to ['models']. (*The results may be slightly different depending on the environments*)
 ## Results on Val. Set
-| Methods                  | Text Rep. | Acc_C | Acc_T | Acc_D | Acc | Text Rep. | Acc_C | Acc_T | Acc_D | Acc   |
+| Methods                  | Text Rep. | Acc@C | Acc@T | Acc@D | Acc | Text Rep. | Acc@C | Acc@T | Acc@D | Acc   |
 | -------------------------| --------: | ----: | ----: | ----: | ---:| --------: | ----: | ----: | ----: | ----: |
 | BlindQA                  |   GloVe   | 26.89 | 30.83 | 32.60 | 30.60 | BERT-FT | 42.62 | 45.53 | 43.89 | 43.76 |
 | [EVQA](https://github.com/doc-doc/NExT-QA/blob/main/networks/VQAModel/EVQA.py)                     |   GloVe   | 28.69 | 31.27 | 41.44 | 31.51 | BERT-FT | 42.64 | 46.34 | 45.82 | 44.24 |
