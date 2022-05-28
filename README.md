@@ -6,7 +6,7 @@ We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT
 1. [x] [Relation annotations](https://drive.google.com/file/d/1RW8ck39n-yScGrOZWJ7gBr1jH3Iy4SSl/view?usp=sharing) are available.
 2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1_MEqDeQHc8Y8Uw7eW58HVuZy2iyThILQ/view?usp=sharing).
 3. [x] Release [spatial feature](https://drive.google.com/file/d/1yJ30T1oAjJ8cO3nHQID0EmIm-yQHdYkK/view?usp=sharing) (valid for 2 weeks from 2020/9/23).
-4. [x] Release [RoI feature](https://drive.google.com/file/d/1vU9IEW0GvXz3wzumfu9X8lm4ri2SBjLB/view?usp=sharing)(tensor shape (vid_num, clip_per_vid, frame_per_clip, region_per_frame, feat_dim). See [HQGA](https://github.com/doc-doc/HQGA) on how to use).
+4. [x] Release [RoI feature](https://drive.google.com/file/d/1vU9IEW0GvXz3wzumfu9X8lm4ri2SBjLB/view?usp=sharing)(tensor shape (vid_num, clip_per_vid, frame_per_clip, region_per_frame, feat_dim).
 
 
 ## Environment
