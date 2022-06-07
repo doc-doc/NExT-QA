@@ -77,4 +77,4 @@ It will train the model and save to ['models']. (*The results may be slightly di
 }
 ```
 ## Acknowledgement
-Our reproduction of the methods is based on the respective official repositories, we thank the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code. If you use any code from this repo, please also acknowledge the source..Thanks~
+Our reproduction of the methods is based on the respective official repositories, we thank the authors to release their code. If you use the related part, please cite the corresponding paper commented in the code. 
