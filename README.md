@@ -65,6 +65,47 @@ It will train the model and save to ['models']. (*The results may be slightly di
 (For comparison, please refer to the results on val/test sets in our paper.)
 ## Multi-choice QA *vs.* Open-ended QA
 ![vis mc_oe](./images/res-mc-oe.png)
+## Some Latest Results
+**<p align="center">Table 2. VideoQA Acccuracy (%).</p>**
+<table>
+  <tr>
+    <th>Methods</th>
+    <th> Publication </th>
+    <th>Val</th>
+    <th>Test</th>
+  </tr>
+  <tr>
+    <th><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Invariant_Grounding_for_Video_Question_Answering_CVPR_2022_paper.pdf", target="_blank">IGV</a></th>
+    <th>CVPR'22</th>
+    <th>-</th>
+    <th>51.4</th>
+  </tr>
+  <tr>
+    <th><a href="https://arxiv.org/pdf/2112.06197v2.pdf", target="_blank">HQGA<a></th>
+    <th>AAAI'22</th>
+    <th>51.4</th>
+    <th>51.8</th>
+  </tr>
+  <tr>
+    <th><a href="https://ojs.aaai.org/index.php/AAAI/article/view/19922" target="_blank">P3D-G<a></th>
+    <th>AAAI'22</th>
+    <th>53.4</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <th><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Buch_Revisiting_the_Video_in_Video-Language_Understanding_CVPR_2022_paper.pdf", target="_blank">ATP</a></th>
+    <th>CVPR'22</th>
+    <th>54.3</th>
+    <th>-</th>
+  </tr>
+  <tr>
+    <th>VGT</th>
+    <th>ECCV'22</th>
+    <th>55.0</th>
+    <th>53.7</th>
+  </tr>
+</table>
+
 ## Citation
 ```
 @InProceedings{xiao2021next,
