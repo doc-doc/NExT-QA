@@ -66,7 +66,7 @@ It will train the model and save to ['models']. (*The results may be slightly di
 ## Multi-choice QA *vs.* Open-ended QA
 ![vis mc_oe](./images/res-mc-oe.png)
 ## Some Latest Results
-**<p align="center">Table 2. VideoQA Acccuracy (%).</p>**
+Table 2. VideoQA Acccuracy (%).
 <table>
   <tr>
     <th>Methods</th>
