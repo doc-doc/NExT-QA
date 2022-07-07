@@ -78,7 +78,7 @@ It will train the model and save to ['models']. (*The results may be slightly di
     <th><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Invariant_Grounding_for_Video_Question_Answering_CVPR_2022_paper.pdf", target="_blank">IGV</a></th>
     <th>CVPR'22</th>
     <th>-</th>
-    <th>51.4</th>
+    <th>51.34</th>
   </tr>
   <tr>
     <th><a href="https://arxiv.org/pdf/2112.06197v2.pdf", target="_blank">HQGA<a></th>
