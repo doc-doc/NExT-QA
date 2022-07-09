@@ -83,8 +83,8 @@ Table 2. VideoQA Acccuracy (%).
   <tr>
     <th><a href="https://arxiv.org/pdf/2112.06197v2.pdf", target="_blank">HQGA<a></th>
     <th>AAAI'22</th>
-    <th>51.4</th>
-    <th>51.8</th>
+    <th>51.42</th>
+    <th>51.75</th>
   </tr>
   <tr>
     <th><a href="https://ojs.aaai.org/index.php/AAAI/article/view/19922" target="_blank">P3D-G<a></th>
@@ -101,8 +101,8 @@ Table 2. VideoQA Acccuracy (%).
   <tr>
     <th>VGT</th>
     <th>ECCV'22</th>
-    <th>55.0</th>
-    <th>53.7</th>
+    <th>55.02</th>
+    <th>53.68</th>
   </tr>
 </table>
 
