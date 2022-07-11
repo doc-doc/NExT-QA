@@ -71,36 +71,42 @@ Table 2. VideoQA Accuracy (%).
   <tr>
     <th>Methods</th>
     <th> Publication </th>
+    <th> Highlight </th>
     <th>Val</th>
     <th>Test</th>
   </tr>
   <tr>
     <th><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Invariant_Grounding_for_Video_Question_Answering_CVPR_2022_paper.pdf", target="_blank">IGV</a></th>
     <th>CVPR'22</th>
+     <th>Causal Grounding</th>
     <th>-</th>
     <th>51.34</th>
   </tr>
   <tr>
     <th><a href="https://arxiv.org/pdf/2112.06197v2.pdf", target="_blank">HQGA<a></th>
     <th>AAAI'22</th>
+    <th>Multi-Granularity</th>
     <th>51.42</th>
     <th>51.75</th>
   </tr>
   <tr>
     <th><a href="https://ojs.aaai.org/index.php/AAAI/article/view/19922" target="_blank">P3D-G<a></th>
     <th>AAAI'22</th>
+    <th>Pesudo 3D Scene Graph</th>
     <th>53.4</th>
     <th>-</th>
   </tr>
   <tr>
     <th><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Buch_Revisiting_the_Video_in_Video-Language_Understanding_CVPR_2022_paper.pdf", target="_blank">ATP</a></th>
     <th>CVPR'22</th>
+    <th> CLIP & Frame Bias </th>
     <th>54.3</th>
     <th>-</th>
   </tr>
   <tr>
     <th>VGT</th>
     <th>ECCV'22</th>
+    <th>Graph Transformer </th>
     <th>55.02</th>
     <th>53.68</th>
   </tr>
