@@ -83,7 +83,7 @@ Table 2. VideoQA Accuracy (%).
     <th>51.34</th>
   </tr>
   <tr>
-    <th><a href="https://arxiv.org/pdf/2112.06197v2.pdf", target="_blank">HQGA<a></th>
+    <th><a href="https://ojs.aaai.org/index.php/AAAI/article/view/20184", target="_blank">HQGA<a></th>
     <th>AAAI'22</th>
     <th>Multi-Granularity</th>
     <th>51.42</th>
