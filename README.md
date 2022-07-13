@@ -104,11 +104,11 @@ Table 2. VideoQA Accuracy (%).
     <th>-</th>
   </tr>
   <tr>
-    <th>VGT</th>
+    <th><a href="https://arxiv.org/pdf/2207.05342.pdf", target="_blank">VGT</a></th>
     <th>ECCV'22</th>
-    <th>Graph Transformer </th>
-    <th>55.02</th>
-    <th>53.68</th>
+    <th>Graph Transformer/(Pretrain) </th>
+    <th>55.02/(56.89)</th>
+    <th>53.68/(55.7)</th>
   </tr>
 </table>
 
