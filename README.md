@@ -71,14 +71,14 @@ Table 2. VideoQA Accuracy (%).
   <tr>
     <th>Methods</th>
     <th> Publication </th>
-    <th> Highlight </th>
+    <th> Highlights </th>
     <th>Val</th>
     <th>Test</th>
   </tr>
   <tr>
     <th><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Li_Invariant_Grounding_for_Video_Question_Answering_CVPR_2022_paper.pdf", target="_blank">IGV</a></th>
     <th>CVPR'22</th>
-     <th>Causal Grounding</th>
+     <th>Invariant Grounding</th>
     <th>-</th>
     <th>51.34</th>
   </tr>
@@ -109,6 +109,13 @@ Table 2. VideoQA Accuracy (%).
     <th>Graph Transformer/(Pretrain) </th>
     <th>55.02/(56.89)</th>
     <th>53.68/(55.7)</th>
+  </tr>
+  <tr>
+    <th><a href="https://arxiv.org/abs/2207.12783", target="_blank">HGA+EIGV</a></th>
+    <th>ACM MM'22</th>
+    <th>Equivariant and Invariant Grounding</th>
+    <th>-</th>
+    <th>53.7</th>
   </tr>
 </table>
 
