@@ -3,6 +3,7 @@
 We reproduce some SOTA VideoQA methods to provide benchmark results for our NExT-QA dataset accepted to CVPR2021. NExT-QA is a VideoQA benchmark targeting the explanation of video contents. It challenges QA models to reason about the causal and temporal actions and understand the rich object interactions in daily activities. We set up both multi-choice and open-ended QA tasks on the dataset. <strong>This repo. provides resources for multi-choice QA</strong>; open-ended QA is found in [NExT-OE](https://github.com/doc-doc/NExT-OE). For more details, please refer to our [dataset](https://doc-doc.github.io/docs/nextqa.html) page.
 
 ## Todo
+1. [x] Raw videos for train/val/test are [available](https://drive.google.com/file/d/1jTcRCrVHS66ckOUfWRb-rXdzJ52XAWQH/view).
 1. [x] [Relation annotations](https://drive.google.com/file/d/1l1VdNgQiltaJjSmg9QkcxDWbwXXwnIMH/view?usp=share_link) are available.
 2. [x] <s>Open evaluation server</s> and release [test data](https://drive.google.com/file/d/1_MEqDeQHc8Y8Uw7eW58HVuZy2iyThILQ/view?usp=sharing).
 3. [x] Release [spatial feature](https://drive.google.com/file/d/1yJ30T1oAjJ8cO3nHQID0EmIm-yQHdYkK/view?usp=sharing) (valid for 2 weeks from 2020/9/23).
