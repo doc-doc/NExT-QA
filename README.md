@@ -118,6 +118,13 @@ Table 2. VideoQA Accuracy (%).
     <th>-</th>
     <th>53.7</th>
   </tr>
+  <tr>
+    <th><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Gao_MIST_Multi-Modal_Iterative_Spatial-Temporal_Transformer_for_Long-Form_Video_Question_Answering_CVPR_2023_paper.pdf", target="_blank">MIST</a></th>
+    <th>CVPR'23</th>
+    <th>Spatio-temporal Transformer, CLIP</th>
+    <th>57.3</th>
+    <th>-</th>
+  </tr>
 </table>
 
 ## Citation
