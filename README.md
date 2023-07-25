@@ -125,6 +125,20 @@ Table 2. VideoQA Accuracy (%).
     <th>57.3</th>
     <th>-</th>
   </tr>
+  <tr>
+    <th><a href="https://ieeexplore.ieee.org/document/10172254", target="_blank">CoVGT</a></th>
+    <th>T-PAMI'23</th>
+    <th>Contrastive, Graph Transformer/(Pretrain)</th>
+    <th>60.0/(60.7)</th>
+    <th>59.4/(59.7)</th>
+  </tr>
+  <tr>
+    <th><a href="https://arxiv.org/abs/2307.12058v1", target="_blank">TranSTR</a></th>
+    <th>ICCV'23</th>
+    <th>Spatio-Temporal Rationales</th>
+    <th>-</th>
+    <th>61.5</th>
+  </tr>
 </table>
 
 ## Citation
