@@ -25,7 +25,7 @@ Please create an env for this project using anaconda (should install [anaconda](
 ## Data Preparation
 Please download the pre-computed features and QA annotations from [here](https://drive.google.com/drive/folders/1gKRR2es8-gRTyP25CvrrVtV6aN5UxttF?usp=sharing). There are 4 zip files: 
 - ```['vid_feat.zip']```: Appearance and motion feature for video representation. (With code provided by [HCRN](https://github.com/thaolmk54/hcrn-videoqa)).
-- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation. (Based on [pytorch-pretrained-BERT](https://github.com/LuoweiZhou/pytorch-pretrained-BERT/)).
+- ```['qas_bert.zip']```: Finetuned BERT feature for QA-pair representation. (Based on [pytorch-pretrained-BERT](https://github.com/LuoweiZhou/pytorch-pretrained-BERT/)). Our edited version is [available](https://drive.google.com/file/d/1_wwJrB7r974Eq3VkXUnUlPhBwQRDLMbZ/view).
 - ```['nextqa.zip']```: Annotations of QAs and GloVe Embeddings. 
 - ```['models.zip']```: HGA model. 
 
